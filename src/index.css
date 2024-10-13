@@ -1,7 +1,47 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
-  margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.etabs-tabgroup {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.etabs-tabs {
+  background-color: #f0f0f0;
+}
+
+.etabs-tab {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.etabs-tab.active {
+  background-color: #fff;
+}
+
+.etabs-views {
+  flex-grow: 1;
+  position: relative;
+}
+
+.etabs-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+button {
+  margin: 10px;
+  padding: 5px 10px;
 }

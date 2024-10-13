@@ -37,6 +37,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "@electron-forge/shared-types": "^7.5.0",
+    "electron-squirrel-startup": "^1.0.1",
+    "electron-tabs": "^1.0.4"
   }
 }

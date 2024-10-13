@@ -3,11 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hello World!</title>
-
   </head>
   <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
+    <tab-group new-tab-button="true" sortable="true"></tab-group>
+
+    <script src="node_modules/electron-tabs/dist/electron-tabs.js"></script>
+
     <script type="module" src="/src/renderer.ts"></script>
+    <script>
+      // Select tab-group
+      const tabGroup = document.querySelector("tab-group");
+
+      // Setup the default tab which is created when the "New Tab" button is clicked
+      tabGroup.setDefaultTab({
+        title: "New Page",
+        src: "src/index.html",
+        active: true,
+      });
+
+      // Do stuff
+      const tab = tabGroup.addTab({
+        title: "electron-tabs on NPM",
+        src: "https://www.npmjs.com/package/electron-tabs",
+      });
+      const pos = tab.getPosition();
+      console.log("Tab position is " + pos);
+    </script>
   </body>
 </html>
